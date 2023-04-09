@@ -9,22 +9,22 @@
 ## OSQP 举例
 
 找到下式的最小值
-$$
-f(x)=\frac{1}{2}x_1^2+x_2^2-x_1x_2-2x_1-6x_2
-$$
+
+$f(x)=\frac{1}{2}x_1^2+x_2^2-x_1x_2-2x_1-6x_2$
+
 需满足以下约束
-$$
-x_1+x_2\leq2\\
+
+$x_1+x_2\leq2\\
 -x_1+2x_2\leq2\\
-2x_1+x_2\leq3
-$$
+2x_1+x_2\leq3$
+
 在QP问题中，QP问题的定义形式：
-$$
-f(x)=\frac{1}{2}x^THx+f^Tx
-$$
+
+$f(x)=\frac{1}{2}x^THx+f^Tx$
+
 所以上面的问题可以对等为
-$$
-f(x)=\frac{1}{2} \left[
+
+$f(x)=\frac{1}{2} \left[
  \begin{matrix}
    x_1 & x_2
   \end{matrix}
@@ -45,15 +45,15 @@ f(x)=\frac{1}{2} \left[
  \begin{matrix}
    x_1 \\ x_2
   \end{matrix}
-  \right]
-$$
+  \right]$
+
 constrain 的定义为
-$$
-Ax\leq b
-$$
+
+$Ax\leq b$
+
 所以constrain可写为
-$$
-\left[
+
+$\left[
  \begin{matrix}
    1&1 \\ -1&2\\2&1
   \end{matrix}
@@ -66,8 +66,7 @@ $$
  \begin{matrix}
    2 \\ 2\\3
   \end{matrix}
-  \right]
-$$
+  \right]$
 
 
 故系数矩阵为
@@ -79,3 +78,6 @@ f = [-2;-6]
 A =[1 1;-1 2;2 1]
 
 b =[2;2;3]
+
+$Ax\leq b$
+
